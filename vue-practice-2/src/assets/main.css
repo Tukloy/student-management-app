@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+@layer utilities {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+}
+
+/* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+}
+}
+section {
+  margin-left: auto;
+  margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+}
+@media (min-width: 1024px) {
+  /* For large screens (lg) */
+  section {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* For extra large screens (xl) */
+  section {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1536px) {
+  /* For 2x extra large screens (2xl) */
+  section {
+    width: 85%;
+  }
+}
+.btn{
+  display: inline-block;
+  color: white;
+  font-size: 0.875rem;
+  line-height: 2rem; 
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  margin-inline-end: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  transition: ease-out;
+}
+.btn:hover{
+    box-shadow: 0 0 10px -1px #7DD3FC;
+    background: linear-gradient(to bottom right, #3b82f6, #2563eb, #1d4ed8);
+}
