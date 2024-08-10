@@ -16,7 +16,7 @@
                             class="w-full rounded-sm bg-[url('https://images.unsplash.com/photo-1449844908441-8829872d2607?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxob21lfGVufDB8MHx8fDE3MTA0MDE1NDZ8MA&ixlib=rb-4.0.3&q=80&w=1080')] bg-cover bg-center bg-no-repeat items-center">
                             <!-- Profile Image -->
                             <div
-                                class="mx-auto flex justify-center w-[141px] h-[141px] bg-blue-300/20 rounded-full bg-[url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw4fHxwcm9maWxlfGVufDB8MHx8fDE3MTEwMDM0MjN8MA&ixlib=rb-4.0.3&q=80&w=1080')] bg-cover bg-center bg-no-repeat">
+                                class="mx-auto flex justify-center w-[141px] h-[141px] bg-blue-300/20 rounded-full bg-[url('https://scontent.fmnl9-1.fna.fbcdn.net/v/t39.30808-6/317735488_6293198287376054_8420692245888528439_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEEWe8bHY0sDfUQ2rjglTidkzZKJLUiCTKTNkoktSIJMjUpQB_zamhLMDNeYwowQNvcYqLdMpy4k7_jAB8D6fH-&_nc_ohc=T22UE3OsaDsQ7kNvgF90sFj&_nc_ht=scontent.fmnl9-1.fna&oh=00_AYCh5ZQZgkr5HziIaKnq5BXCHudd8_U450sFhx3qu7IcQg&oe=66B9451D')] bg-cover bg-center bg-no-repeat">
 
                                 <div class="bg-white/90 rounded-full w-6 h-6 text-center ml-28 mt-4">
 
@@ -67,13 +67,13 @@
                                 <label for="" class="mb-2 dark:text-gray-300">First Name</label>
                                 <input type="text"
                                     class="mt-2 p-4 w-full border-2 rounded-lg dark:text-gray-200 dark:border-gray-600 dark:bg-gray-800"
-                                    placeholder="First Name">
+                                    placeholder="First Name" value="Fatima">
                             </div>
                             <div class="w-full  mb-4 lg:mt-6">
                                 <label for="" class=" dark:text-gray-300">Last Name</label>
                                 <input type="text"
                                     class="mt-2 p-4 w-full border-2 rounded-lg dark:text-gray-200 dark:border-gray-600 dark:bg-gray-800"
-                                    placeholder="Last Name">
+                                    placeholder="Last Name" value="Sabariaga">
                             </div>
                         </div>
 
@@ -83,14 +83,14 @@
                                 <select
                                     class="w-full text-grey border-2 rounded-lg p-4 pl-2 pr-2 dark:text-gray-200 dark:border-gray-600 dark:bg-gray-800">
                                     <option disabled value="">Select Sex</option>
-                                    <option value="Male">Male</option>
                                     <option value="Female">Female</option>
+                                    <option value="Male">Male</option>
                                 </select>
                             </div>
                             <div class="w-full">
                                 <h3 class="dark:text-gray-300 mb-2">Date Of Birth</h3>
                                 <input type="date"
-                                    class="text-grey p-4 w-full border-2 rounded-lg dark:text-gray-200 dark:border-gray-600 dark:bg-gray-800">
+                                    class="text-grey p-4 w-full border-2 rounded-lg dark:text-gray-200 dark:border-gray-600 dark:bg-gray-800" value="1998-11-15">
                             </div>
                         </div>
                         <div class="w-full rounded-lg bg-blue-500 mt-4 text-white text-lg font-semibold">

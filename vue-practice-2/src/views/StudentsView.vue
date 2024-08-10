@@ -15,7 +15,6 @@ const toast = useToast();
 const router = useRouter();
 const searchQuery = reactive({
     filterTable: '',
-    filterDrop: ''
 });
 
 const isNonEmptyString = (value) => {
@@ -23,12 +22,10 @@ const isNonEmptyString = (value) => {
 };
 
 const filteredTableData = computed(() => {
-    if (!isNonEmptyString(searchQuery.filterTable || searchQuery.filterDrop)) {
+    if (!isNonEmptyString(searchQuery.filterTable)) {
         return state.students;
     }
     const query = searchQuery.filterTable.toLowerCase();
-    const query2 = searchQuery.filterDrop.toLowerCase();
-    console.log(query2)
     return state.students.filter(student =>
         (student.firstname && student.firstname.toLowerCase().includes(query)) ||
         (student.lastname && student.lastname.toLowerCase().includes(query)) ||
@@ -157,7 +154,7 @@ const toggleModal = () => {
                 <div class="flex flex-row gap-x-4">
                     <div>
                         <label class="block mb-2 text-sm font-medium text-gray-900">Student ID:</label>
-                        <input v-model="form.student_id" type="text" :readonly="isReadonly" :class="{
+                        <input v-model="form.student_id" type="text" readonly :class="{
                             'border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  focus:outline-none block w-full p-2.5': true, 'bg-gray-50  text-gray-900': isReadonly === false,
                             'bg-gray-300 text-gray-50': isReadonly === true
                         }" required />
@@ -250,20 +247,15 @@ const toggleModal = () => {
         <div class="flex justify-between items-baseline mx-auto">
             <div>
                 <RouterLink to="/student-create">
-                    <div class="btn mb-3 ml-3 bg-blue-700">
-                        Create Student
+                    <div class="btn mb-3 ml-3 bg-blue-500">
+                        <div class="flex items-center gap-x-2">
+                            <i class="pi pi-user-plus"></i>
+                        <span>Create</span>
+                        </div>
                     </div>
                 </RouterLink>
             </div>
-            <div class="w-[22vw] mr-8 relative flex gap-x-4">
-                <div class="w-36">
-                    <select v-model="searchQuery.filterDrop"
-                        class="border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  focus:outline-none block w-full p-2.5">
-                        <option selected>All</option>
-                        <option value="Active">Active</option>
-                        <option vlaue="Inactive">Inactive</option>
-                    </select>
-                </div>
+            <div class="w-[22vw] mr-8 relative">
                 <input
                     class="w-full p-2.5 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  focus:outline-none block"
                     type="text" v-model="searchQuery.filterTable" placeholder="Search..." />
@@ -276,10 +268,10 @@ const toggleModal = () => {
         <div v-if="state.isLoading" class="text-center text-gray-500 py-6">
             <PulseLoader />
         </div>
-        <div v-else class="container mx-auto px-4">
-            <div class="overflow-y-auto h-[63vh] no-scrollbar">
+        <div v-else class="w-full px-4">
+            <div class="overflow-x-auto h-[63vh] no-scrollbar shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]">
                 <table class="min-w-full bg-white">
-                    <thead class="sticky inset-y-0 z-10 bg-inherit text-center">
+                    <thead class="sticky inset-y-0 z-0 bg-inherit text-center">
                         <tr
                             class="bg-gradient-to-b from-gray-600 to-gray-400 text-stone-50 text-center text-sm uppercase font-semibold">
                             <th class="w-12 cs-border"></th>
@@ -293,18 +285,18 @@ const toggleModal = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="(student, index) in filteredTableData" :key="student.id" class="border-b">
-                            <td class="py-2 px-4">{{ index + 1 }}</td>
-                            <td class="py-2 px-4 text-center">{{ student.student_id }}</td>
-                            <td class="py-2 px-4">{{ student.firstname + " " + student.lastname }}</td>
-                            <td class="py-2 px-4">{{ student.email }}</td>
-                            <td class="py-2 px-4">{{ student.phone }}</td>
-                            <td class="py-2 px-4">{{ student.address }}</td>
+                        <tr v-for="(student, index) in filteredTableData" :key="student.id" class="border-b hover:bg-gray-100">
+                            <td class="py-2 px-4 whitespace-nowrap text-sm">{{ index + 1 }}</td>
+                            <td class="py-2 px-4 whitespace-nowrap text-sm text-center">{{ student.student_id }}</td>
+                            <td class="py-2 px-4 whitespace-nowrap text-sm">{{ student.firstname + " " + student.lastname }}</td>
+                            <td class="py-2 px-4 whitespace-nowrap text-sm">{{ student.email }}</td>
+                            <td class="py-2 px-4 whitespace-nowrap text-sm">{{ student.phone }}</td>
+                            <td class="py-2 px-4 whitespace-nowrap text-sm">{{ student.address }}</td>
                             <td class='py-1 px-1 text-center'>
                                 <div :class="{
-                                    'text-center text-gray-700 rounded-full py-2 my-2': true,
-                                    'text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2': student.status === 'Active',
-                                    'text-white bg-gradient-to-r from-red-300 via-red-400 to-red-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2': student.status === 'Inactive'
+                                    'rounded-full text-sm text-center font-bold rounded-lg px-1 py-1': true,
+                                    'text-lime-700 bg-lime-400': student.status === 'Active',
+                                    'text-orange-700 bg-orange-400': student.status === 'Inactive'
                                 }">
                                     {{ student.status }}
                                 </div>
@@ -314,22 +306,13 @@ const toggleModal = () => {
                                     <div class="bg-blue-500 rounded-full p-1.5 mr-2 flex items-center justify-center">
                                         <button @click="getStudentData(student.id)"
                                             class="inline-block w-6 h-6 flex items-center justify-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="w-4 h-4 text-white">
-                                                <path
-                                                    d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
-                                            </svg>
+                                           <i class="pi pi-user-edit text-white"></i>
                                         </button>
                                     </div>
                                     <div class="bg-red-500 rounded-full p-1.5 flex items-center justify-center">
                                         <button @click="deleteStudent(student.id)"
                                             class="inline-block w-6 h-6 flex items-center justify-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                                fill="currentColor" class="w-4 h-4 text-white">
-                                                <path fill-rule="evenodd"
-                                                    d="M16.5 4.478v.227a48.816 48.816 0 0 1 3.878.512.75.75 0 1 1-.256 1.478l-.209-.035-1.005 13.07a3 3 0 0 1-2.991 2.77H8.084a3 3 0 0 1-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 0 1-.256-1.478A48.567 48.567 0 0 1 7.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 0 1 3.369 0c1.603.051 2.815 1.387 2.815 2.951Zm-6.136-1.452a51.196 51.196 0 0 1 3.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 0 0-6 0v-.113c0-.794.609-1.428 1.364-1.452Zm-.355 5.945a.75.75 0 1 0-1.5.058l.347 9a.75.75 0 1 0 1.499-.058l-.346-9Zm5.48.058a.75.75 0 1 0-1.498-.058l-.347 9a.75.75 0 0 0 1.5.058l.345-9Z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
+                                            <i class="pi pi-trash text-white"></i>
                                         </button>
                                     </div>
                                 </div>

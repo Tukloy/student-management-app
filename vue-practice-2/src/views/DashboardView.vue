@@ -21,8 +21,8 @@
 <script setup>
 </script>
 <template>
-  <div>
-    <div class="ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
+  <section>
+    <div>
       <div class="px-4 pt-4 2xl:container">
         <div class="grid gap-12 md:grid-cols-3 lg:grid-cols-4 mb-10">
           <div class="card-container ">
@@ -82,7 +82,7 @@
                 </svg>
               </div>
               <div>
-                <p class="text-sm font-bold text-gray-600 mb-3">Total Department</p>
+                <p class="text-sm font-bold text-gray-600 mb-3 whitespace-nowrap">Total Department</p>
                 <p class="text-2xl text-gray-400 font-bold">5</p>
               </div>
             </div>
@@ -168,5 +168,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>

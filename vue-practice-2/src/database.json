@@ -99,7 +99,6 @@
       "email": "fiona.martinez@example.com",
       "emergency_contact": "Luis Martinez - 2109876543",
       "status": "Inactive",
-      "course": "Environmental Science",
       "id": "8"
     },
     {
@@ -260,7 +259,7 @@
     {
       "id": "21",
       "student_id": "S021",
-      "firstname": "Rheyvince",
+      "firstname": "Rheyvince Lawrence",
       "lastname": "Napay",
       "gender": "Male",
       "phone": 9476948265,
@@ -292,20 +291,478 @@
       "emergency_contact": "Gino Santos 9176543210",
       "status": "Inactive",
       "id": "23"
+    },
+    {
+      "student_id": "S024",
+      "firstname": "Terrence",
+      "lastname": "Soriano",
+      "gender": "Male",
+      "phone": "9123456789",
+      "address": "0010 Crisostomo San Isidro Pagsanjan Laguna 4008",
+      "email": "terrence.dingba@gmail.com",
+      "emergency_contact": "Rheyvince Lawrence Napay 9123456789",
+      "status": "Inactive",
+      "id": "24"
     }
   ],
   "instructors": [
     {
       "id": "1",
-      "student_id": "S001",
-      "firstname": "John",
-      "lastname": "Doe",
+      "instructor_id": "I001",
+      "firstname": "Alan",
+      "lastname": "Turing",
       "gender": "Male",
-      "phone": "123-456-7890",
-      "address": "123 Main St, Springfield, IL",
-      "email": "john.doe@example.com",
-      "emergency_contact": "Jane Doe - 098-765-4321",
-      "status": "Active"
+      "phone": "1112223333",
+      "email": "alan.turing@example.com",
+      "address": "123 Computation Ln, Cambridge, UK",
+      "department": "Computer Science",
+      "type": "Part-Time"
+    },
+    {
+      "id": "2",
+      "instructor_id": "I002",
+      "firstname": "Grace",
+      "lastname": "Hopper",
+      "gender": "Female",
+      "phone": "2223334444",
+      "email": "grace.hopper@example.com",
+      "address": "456 Navy St, Arlington, VA",
+      "department": "Computer Science",
+      "type": "Full-Time"
+    },
+    {
+      "id": "3",
+      "instructor_id": "I003",
+      "firstname": "Ada",
+      "lastname": "Lovelace",
+      "gender": "Female",
+      "phone": "3334445555",
+      "email": "ada.lovelace@example.com",
+      "address": "789 Algorithm Rd, London, UK",
+      "department": "Mathematics",
+      "type": "Full-Time"
+    },
+    {
+      "id": "4",
+      "instructor_id": "I004",
+      "firstname": "John",
+      "lastname": "Von Neumann",
+      "gender": "Male",
+      "phone": "4445556666",
+      "email": "john.vonneumann@example.com",
+      "address": "101 Binary St, Princeton, NJ",
+      "department": "Mathematics",
+      "type": "Full-Time"
+    },
+    {
+      "id": "5",
+      "instructor_id": "I005",
+      "firstname": "Katherine",
+      "lastname": "Johnson",
+      "gender": "Female",
+      "phone": "5556667777",
+      "email": "katherine.johnson@example.com",
+      "address": "202 Space Ave, Hampton, VA",
+      "department": "Physics",
+      "type": "Full-Time"
+    },
+    {
+      "id": "6",
+      "instructor_id": "I006",
+      "firstname": "Richard",
+      "lastname": "Feynman",
+      "gender": "Male",
+      "phone": "6667778888",
+      "email": "richard.feynman@example.com",
+      "address": "303 Quantum Dr, Pasadena, CA",
+      "department": "Physics",
+      "type": "Full-Time"
+    },
+    {
+      "id": "7",
+      "instructor_id": "I007",
+      "firstname": "Marie",
+      "lastname": "Curie",
+      "gender": "Female",
+      "phone": "7778889999",
+      "email": "marie.curie@example.com",
+      "address": "404 Radioactivity Blvd, Paris, France",
+      "department": "Chemistry",
+      "type": "Full-Time"
+    },
+    {
+      "id": "8",
+      "instructor_id": "I008",
+      "firstname": "Albert",
+      "lastname": "Einstein",
+      "gender": "Male",
+      "phone": "8889990000",
+      "email": "albert.einstein@example.com",
+      "address": "505 Relativity Rd, Princeton, NJ",
+      "department": "Physics",
+      "type": "Full-Time"
+    },
+    {
+      "id": "9",
+      "instructor_id": "I009",
+      "firstname": "Rosalind",
+      "lastname": "Franklin",
+      "gender": "Female",
+      "phone": "9990001111",
+      "email": "rosalind.franklin@example.com",
+      "address": "606 DNA Ln, London, UK",
+      "department": "Biology",
+      "type": "Full-Time"
+    },
+    {
+      "id": "10",
+      "instructor_id": "I010",
+      "firstname": "Carl",
+      "lastname": "Sagan",
+      "gender": "Male",
+      "phone": "0001112222",
+      "email": "carl.sagan@example.com",
+      "address": "707 Cosmos St, Ithaca, NY",
+      "department": "Astronomy",
+      "type": "Full-Time"
+    },
+    {
+      "id": "11",
+      "instructor_id": "I011",
+      "firstname": "Jane",
+      "lastname": "Goodall",
+      "gender": "Female",
+      "phone": "1112223334",
+      "email": "jane.goodall@example.com",
+      "address": "808 Chimpanzee Rd, London, UK",
+      "department": "Biology",
+      "type": "Full-Time"
+    },
+    {
+      "id": "12",
+      "instructor_id": "I012",
+      "firstname": "Stephen",
+      "lastname": "Hawking",
+      "gender": "Male",
+      "phone": "2223334445",
+      "email": "stephen.hawking@example.com",
+      "address": "909 Blackhole Blvd, Cambridge, UK",
+      "department": "Physics",
+      "type": "Full-Time"
+    },
+    {
+      "id": "13",
+      "instructor_id": "I013",
+      "firstname": "Barbara",
+      "lastname": "McClintock",
+      "gender": "Female",
+      "phone": "3334445556",
+      "email": "barbara.mcclintock@example.com",
+      "address": "1010 Genetics St, Hartford, CT",
+      "department": "Biology",
+      "type": "Full-Time"
+    },
+    {
+      "id": "14",
+      "instructor_id": "I014",
+      "firstname": "Niels",
+      "lastname": "Bohr",
+      "gender": "Male",
+      "phone": "4445556667",
+      "email": "niels.bohr@example.com",
+      "address": "1111 Quantum Ln, Copenhagen, Denmark",
+      "department": "Physics",
+      "type": "Full-Time"
+    },
+    {
+      "id": "15",
+      "instructor_id": "I015",
+      "firstname": "Rachel",
+      "lastname": "Carson",
+      "gender": "Female",
+      "phone": "5556667778",
+      "email": "rachel.carson@example.com",
+      "address": "1212 Ecology Ave, Silver Spring, MD",
+      "department": "Environmental Science",
+      "type": "Full-Time"
+    },
+    {
+      "id": "16",
+      "instructor_id": "S016",
+      "firstname": "Fatima",
+      "lastname": "Sabariaga",
+      "course": "BSARCH",
+      "gender": "Female",
+      "phone": 9457416265,
+      "email": "sabariagafatima@gmail.com",
+      "address": "123 110 Maronquillo, San Rafael, Bulacan SASDASD San Rafael, Bulacan Bulacan 3008",
+      "type": "Full-Time"
+    },
+    {
+      "id": "17",
+      "instructor_id": "I017",
+      "firstname": "Josiah",
+      "lastname": "Cade",
+      "course": "BSMATH",
+      "gender": "Male",
+      "phone": 80549,
+      "email": "faweref@mailinator.com",
+      "address": "Jael Octavius Cheryl Joelle Clare 77256",
+      "type": "Full-Time"
+    }
+  ],
+  "courses": [
+    {
+      "id": "1",
+      "course_id": "ENG101",
+      "name": "English Composition",
+      "description": "This course focuses on developing writing skills, including essay structure, grammar, and argumentation.",
+      "credits": 3,
+      "category": "General Education"
+    },
+    {
+      "id": "2",
+      "course_id": "MATH101",
+      "name": "College Algebra",
+      "description": "An introductory course in algebra, covering functions, equations, inequalities, and graphing.",
+      "credits": 3,
+      "category": "Mathematics"
+    },
+    {
+      "id": "3",
+      "course_id": "HIST101",
+      "name": "World History",
+      "description": "A survey of world history from ancient civilizations to the modern era, focusing on key events and developments.",
+      "credits": 3,
+      "category": "Social Sciences"
+    },
+    {
+      "id": "4",
+      "course_id": "BIO101",
+      "name": "General Biology",
+      "description": "An introductory course on biological principles, including cell structure, genetics, and evolution.",
+      "credits": 3,
+      "category": "Natural Sciences"
+    },
+    {
+      "id": "5",
+      "course_id": "CHEM101",
+      "name": "General Chemistry I",
+      "description": "A foundational course in chemistry, covering atomic structure, chemical bonding, and thermodynamics.",
+      "credits": 3,
+      "category": "Natural Sciences"
+    },
+    {
+      "id": "6",
+      "course_id": "PSYC101",
+      "name": "Introduction to Psychology",
+      "description": "This course provides an overview of psychological theories, research methods, and applications.",
+      "credits": 3,
+      "category": "Social Sciences"
+    },
+    {
+      "id": "7",
+      "course_id": "PHIL101",
+      "name": "Introduction to Philosophy",
+      "description": "An exploration of fundamental philosophical questions and concepts, including ethics, logic, and metaphysics.",
+      "credits": 3,
+      "category": "Humanities"
+    },
+    {
+      "id": "8",
+      "course_id": "ECON101",
+      "name": "Principles of Economics",
+      "description": "An introduction to microeconomics and macroeconomics, focusing on supply and demand, market structures, and economic policies.",
+      "credits": 3,
+      "category": "Social Sciences"
+    },
+    {
+      "id": "9",
+      "course_id": "ART101",
+      "name": "Introduction to Visual Arts",
+      "description": "A course exploring the history, techniques, and appreciation of visual arts from various cultures and periods.",
+      "credits": 3,
+      "category": "Arts"
+    },
+    {
+      "id": "10",
+      "course_id": "PHYS101",
+      "name": "General Physics I",
+      "description": "An introductory course on classical mechanics, covering forces, motion, energy, and momentum.",
+      "credits": 4,
+      "category": "Natural Sciences"
+    },
+    {
+      "id": "11",
+      "course_id": "SOC101",
+      "name": "Introduction to Sociology",
+      "description": "This course examines the structure of human society, including social institutions, culture, and socialization.",
+      "credits": 3,
+      "category": "Social Sciences"
+    },
+    {
+      "id": "12",
+      "course_id": "MUS101",
+      "name": "Music Appreciation",
+      "description": "An introduction to music, focusing on the history, theory, and cultural significance of various musical genres.",
+      "credits": 2,
+      "category": "Arts"
+    },
+    {
+      "id": "13",
+      "course_id": "SPAN101",
+      "name": "Introduction to Spanish",
+      "description": "A beginner's course in Spanish language and culture, focusing on basic vocabulary, grammar, and communication skills.",
+      "credits": 3,
+      "category": "Languages"
+    },
+    {
+      "id": "14",
+      "course_id": "COMP101",
+      "name": "Introduction to Computer Science",
+      "description": "An overview of computer science principles, including programming, algorithms, and data structures.",
+      "credits": 3,
+      "category": "Mathematics"
+    },
+    {
+      "id": "15",
+      "course_id": "ANTH101",
+      "name": "Cultural Anthropology",
+      "description": "An introduction to the study of human cultures, focusing on social practices, beliefs, and cultural diversity.",
+      "credits": 3,
+      "category": "Social Sciences"
+    },
+    {
+      "id": "16",
+      "course_id": "ENV101",
+      "name": "Introduction to Environmental Science",
+      "description": "This course explores environmental issues, sustainability, and the impact of human activity on the environment.",
+      "credits": 3,
+      "category": "Natural Sciences"
+    },
+    {
+      "id": "17",
+      "course_id": "LIT101",
+      "name": "Introduction to Literature",
+      "description": "An exploration of major literary works, including poetry, drama, and prose from various periods.",
+      "credits": 3,
+      "category": "Humanities"
+    },
+    {
+      "id": "18",
+      "course_id": "STAT101",
+      "name": "Introduction to Statistics",
+      "description": "A course covering basic statistical concepts, including data analysis, probability, and hypothesis testing.",
+      "credits": 3,
+      "category": "Mathematics"
+    },
+    {
+      "id": "19",
+      "course_id": "GEO101",
+      "name": "World Geography",
+      "description": "This course covers the physical and human geography of the world, focusing on regions, cultures, and global issues.",
+      "credits": 3,
+      "category": "Social Sciences"
+    },
+    {
+      "id": "20",
+      "course_id": "THEO101",
+      "name": "Introduction to Theology",
+      "description": "An exploration of theological concepts, religious practices, and the role of religion in society.",
+      "credits": 3,
+      "category": "Humanities"
+    }
+  ],
+  "departments": [
+    {
+      "id": "1",
+      "department_id": "CS",
+      "name": "Department of Computer Science",
+      "description": "This department focuses on the study and research of computer science, including programming, algorithms, data structures, and software engineering."
+    },
+    {
+      "id": "2",
+      "department_id": "MATH",
+      "name": "Department of Mathematics",
+      "description": "The Department of Mathematics offers courses and research opportunities in pure and applied mathematics, including algebra, calculus, and statistics."
+    },
+    {
+      "id": "3",
+      "department_id": "BIO",
+      "name": "Department of Biology",
+      "description": "This department covers various fields in biological sciences, including genetics, ecology, molecular biology, and environmental science."
+    },
+    {
+      "id": "4",
+      "department_id": "CHEM",
+      "name": "Department of Chemistry",
+      "description": "The Department of Chemistry provides education and research in chemical sciences, including organic, inorganic, physical, and analytical chemistry."
+    },
+    {
+      "id": "5",
+      "department_id": "PHYS",
+      "name": "Department of Physics",
+      "description": "This department offers courses and conducts research in physics, covering classical mechanics, electromagnetism, quantum mechanics, and thermodynamics."
+    },
+    {
+      "id": "6",
+      "department_id": "ENG",
+      "name": "Department of English",
+      "description": "The Department of English focuses on the study of literature, language, and writing, offering courses in English literature, creative writing, and linguistics."
+    },
+    {
+      "id": "7",
+      "department_id": "HIST",
+      "name": "Department of History",
+      "description": "This department offers a comprehensive study of historical events, cultures, and societies, with courses in world history, regional history, and historical research methods."
+    },
+    {
+      "id": "8",
+      "department_id": "ECON",
+      "name": "Department of Economics",
+      "description": "The Department of Economics provides education in economic theory, econometrics, and policy analysis, with research opportunities in microeconomics and macroeconomics."
+    },
+    {
+      "id": "9",
+      "department_id": "PSYC",
+      "name": "Department of Psychology",
+      "description": "This department focuses on the study of human behavior, cognition, and emotion, offering courses in developmental, clinical, and social psychology."
+    },
+    {
+      "id": "10",
+      "department_id": "PHIL",
+      "name": "Department of Philosophy",
+      "description": "The Department of Philosophy explores fundamental questions about existence, knowledge, and ethics, with courses in logic, metaphysics, and moral philosophy."
+    },
+    {
+      "id": "11",
+      "department_id": "SOC",
+      "name": "Department of Sociology",
+      "description": "This department examines social structures, institutions, and relationships, offering courses in social theory, research methods, and sociology of various social issues."
+    },
+    {
+      "id": "12",
+      "department_id": "ART",
+      "name": "Department of Visual Arts",
+      "description": "The Department of Visual Arts provides education in art history, studio art, and design, with courses in painting, sculpture, and digital media."
+    },
+    {
+      "id": "13",
+      "department_id": "MUS",
+      "name": "Department of Music",
+      "description": "This department offers courses and performance opportunities in music theory, history, and practice, covering various genres and instruments."
+    },
+    {
+      "id": "14",
+      "department_id": "BUS",
+      "name": "Department of Business Administration",
+      "description": "The Department of Business Administration provides education in business management, finance, marketing, and entrepreneurship, with opportunities for research and practical experience."
+    },
+    {
+      "id": "15",
+      "department_id": "ENV",
+      "name": "Department of Environmental Science",
+      "description": "This department focuses on the study of environmental processes, sustainability, and the impact of human activity on the environment, with courses in ecology, conservation, and environmental policy."
     }
   ]
 }

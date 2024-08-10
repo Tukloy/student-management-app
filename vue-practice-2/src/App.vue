@@ -16,10 +16,19 @@ const setTitle = () => {
       title.value = 'Profile Management';
       break;
     case 'Students View':
-      title.value = 'Students Management';
+      title.value = 'Student Management';
       break;
     case 'Student Create':
       title.value = 'Student Registration Form';
+      break;
+    case 'Instructors View':
+      title.value = 'Instructor Management';
+      break;
+    case 'Instructors Create':
+      title.value = 'Instructor Registration Form';
+      break;
+    case 'Courses View':
+      title.value = 'Course Management'
       break;
     // Add cases for other routes
     default:

@@ -13,8 +13,8 @@ const isActiveLink = (routePath) => {
         <aside id="logo-sidebar"
             class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
             aria-label="Sidebar">
-            <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-                <RouterLink to="/" class="flex items-center ps-2.5 mb-7">
+            <div class="h-full pl-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+                <RouterLink to="/" class="flex items-center mb-7">
                     <img :src=Logo class="h-7 me-3 sm:h-8" alt="Logo" />
                     <span class="self-center text-sm font-semibold whitespace-nowrap dark:text-white">School
                         Management

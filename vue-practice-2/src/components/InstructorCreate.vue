@@ -17,11 +17,11 @@ const router = useRouter();
 const toast = useToast();
 const form = reactive({
     id: '',
-    student_id: '',
+    instructor_id: '',
     firstname: '',
     lastname: '',
     gender: 'Female',
-    course: '',
+    department: '',
     phone: null,
     address: {
         house_no: '',
@@ -32,34 +32,30 @@ const form = reactive({
         zip_code: null
     },
     email: '',
-    emergency_contact: {
-        name: '',
-        phone: null
-    },
-    status: 'Active',
+    type: 'Full-Time',
 
 });
 const state = ({
-    students: {}
+    instructors: {}
 })
-const getStudentId = async () => {
+const getInstructorId = async () => {
     try {
-        const response = await axios.get('/api/students');
-        state.students = response.data;
+        const response = await axios.get('/api/instructors');
+        state.instructors = response.data;
 
         // Compute the last ID immediately after setting the state
-        const lastId = Math.max(...state.students.map(student => parseInt(student.id, 10))) + 1;
+        const lastId = Math.max(...state.instructors.map(instructor => parseInt(instructor.id, 10))) + 1;
         form.id = lastId;
-        form.student_id = `S0${lastId}`;
+        form.instructor_id = `I0${lastId}`;
 
     } catch (error) {
-        console.error('Error fetching Student Id', error);
+        console.error('Error fetching instructor Id', error);
     }
 };
 const handleSubmit = async () => {
-    const newStudent = {
+    const newInstructor = {
         id: String(form.id),
-        student_id: form.student_id,
+        instructor_id: form.instructor_id,
         firstname: form.firstname,
         lastname: form.lastname,
         course: form.course,
@@ -70,18 +66,15 @@ const handleSubmit = async () => {
             form.address.house_no + " " + form.address.street + " " +
             form.address.district + " " + form.address.city + " " +
             form.address.province + " " + form.address.zip_code,
-        emergency_contact: form.emergency_contact.name + " " + form.emergency_contact.phone,
-        status: form.status
+        type: form.type
     }
-    
-    console.log(newStudent)
     try {
-        await axios.post('/api/students', newStudent);
-        router.push('/students-view');
-        toast.success('Student Added Successfully');
+        await axios.post('/api/instructors', newInstructor);
+        router.push('/instructors-view');
+        toast.success('Instructor Added Successfully');
     } catch (error) {
-        console.error('Error Adding Student', error);
-        toast.error('Student Was Not Added');
+        console.error('Error Adding instructor', error);
+        toast.error('Instructor Was Not Added');
     }
 }
 const isNonEmptyString = (value) => {
@@ -95,12 +88,9 @@ const isFormValid = computed(() => {
     let stringAddressZipCode = String(form.address.zip_code);
     stringAddressZipCode === 'null' ? stringAddressZipCode = '' : stringAddressZipCode;
 
-    let stringContactPhone = String(form.emergency_contact.phone);
-    stringContactPhone = stringContactPhone === 'null' ? stringContactPhone = '' : stringContactPhone
-
     const result = (isNonEmptyString(form.firstname) &&
         isNonEmptyString(form.lastname) &&
-        isNonEmptyString(form.course) &&
+        isNonEmptyString(form.type) &&
         isNonEmptyString(form.address.house_no) &&
         isNonEmptyString(form.address.street) &&
         isNonEmptyString(form.address.district) &&
@@ -108,20 +98,18 @@ const isFormValid = computed(() => {
         isNonEmptyString(form.address.province) &&
         isNonEmptyString(stringAddressZipCode)) &&
         isNonEmptyString(stringPhone) &&
-        isNonEmptyString(form.email) &&
-        isNonEmptyString(form.emergency_contact.name) &&
-        isNonEmptyString(stringContactPhone);
+        isNonEmptyString(form.email);
     return result;
 
 });
 onMounted(() => {
-    getStudentId();
+    getInstructorId();
 })
 </script>
 <template>
     <section>
         <div class="flex">
-            <RouterLink to="/students-view"
+            <RouterLink to="/instructors-view"
                 class="flex flex-row items-center text-sm font-medium text-gray-900 bg-gray-300 ml-4 p-2 rounded-lg hover:bg-gray-700 hover:text-gray-50 transition ease-in-out">
                 <i class="pi pi-arrow-circle-left pr-2"></i>
                 <div>Back</div>
@@ -134,8 +122,8 @@ onMounted(() => {
                         form below to apply.</label>
                     <div class="flex mb-3 gap-x-4">
                         <div class="flex-2">
-                            <label class="block mb-2 text-sm font-medium text-gray-900" for="">Student ID:</label>
-                            <input v-model="form.student_id"
+                            <label class="block mb-2 text-sm font-medium text-gray-900" for="">Instructor ID:</label>
+                            <input v-model="form.instructor_id"
                                 class="border border-gray-300 text-sm rounded focus:ring-blue-500 focus:border-blue-500  focus:outline-none block w-full p-2.5 bg-gray-50"
                                 readonly type="text">
                         </div>
@@ -249,21 +237,6 @@ onMounted(() => {
                             <input v-model="form.email"
                                 class="border border-gray-300 text-sm rounded focus:ring-blue-500 focus:border-blue-500  focus:outline-none block w-full p-2.5"
                                 placeholder="@email.com" type="email">
-                        </div>
-                    </div>
-                    <div class="flex flex-row border-t-2 border-solid border-gray-300 mt-2 gap-x-4 mb-3">
-                        <div class="flex-1 mt-2">
-                            <label class="block mb-2 text-sm font-medium text-gray-900" for="">Emergency
-                                Contact:</label>
-                            <input v-model="form.emergency_contact.name"
-                                class="border border-gray-300 text-sm rounded focus:ring-blue-500 focus:border-blue-500  focus:outline-none block w-full p-2.5"
-                                placeholder="Full Name" type="text">
-                        </div>
-                        <div class="flex-2 mt-2">
-                            <label class="block mb-2 text-sm font-medium text-gray-900" for="">Phone No.</label>
-                            <input v-model.number="form.emergency_contact.phone"
-                                class="border border-gray-300 text-sm rounded focus:ring-blue-500 focus:border-blue-500  focus:outline-none block w-full p-2.5"
-                                placeholder="09123456789" type="number">
                         </div>
                     </div>
                     <div class="flex flex-row-reverse">
