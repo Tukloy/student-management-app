@@ -119,6 +119,10 @@ const deleteStudent = async (instructorId) => {
         toast.error('Instructor was Not Deleted');
     }
 }
+const truncateText = (text, length) => {
+    const result = text.length > length ? text.substring(0, length) + '...' : text;
+    return result;
+};
 onMounted(() => {
     getInstructorsData();
 });
@@ -285,7 +289,7 @@ const toggleModal = () => {
                                     instructor.firstname + " " + instructor.lastname }}</td>
                                 <td class="px-4 py-2 text-sm text-left">{{ instructor.email }}</td>
                                 <td class="px-4 py-2 text-sm">{{ instructor.phone }}</td>
-                                <td class="px-4 py-2 text-sm text-left">{{ instructor.address }}</td>
+                                <td class="px-4 py-2 text-sm text-left">{{ truncateText(instructor.address, 24) }}</td>
                                 <td class="px-4 py-2 text-sm font-bold">
                                     <div :class="{'bg-gray-100 p-2 rounded-full' : true, 'bg-teal-400 text-teal-700': instructor.type === 'Full-Time',
                                         'bg-red-400 text-red-700' : instructor.type === 'Part-Time'}">

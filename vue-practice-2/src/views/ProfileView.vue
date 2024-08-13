@@ -13,10 +13,10 @@
                     <form>
                         <!-- Cover Image -->
                         <div
-                            class="w-full rounded-sm bg-[url('https://images.unsplash.com/photo-1449844908441-8829872d2607?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxob21lfGVufDB8MHx8fDE3MTA0MDE1NDZ8MA&ixlib=rb-4.0.3&q=80&w=1080')] bg-cover bg-center bg-no-repeat items-center">
+                            class="w-full rounded-sm bg-[url('@/assets/image/profile.jpg')] bg-cover bg-center bg-no-repeat items-center">
                             <!-- Profile Image -->
                             <div
-                                class="mx-auto flex justify-center w-[141px] h-[141px] bg-blue-300/20 rounded-full bg-[url('https://scontent.fmnl9-1.fna.fbcdn.net/v/t39.30808-6/317735488_6293198287376054_8420692245888528439_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEEWe8bHY0sDfUQ2rjglTidkzZKJLUiCTKTNkoktSIJMjUpQB_zamhLMDNeYwowQNvcYqLdMpy4k7_jAB8D6fH-&_nc_ohc=T22UE3OsaDsQ7kNvgF90sFj&_nc_ht=scontent.fmnl9-1.fna&oh=00_AYCh5ZQZgkr5HziIaKnq5BXCHudd8_U450sFhx3qu7IcQg&oe=66B9451D')] bg-cover bg-center bg-no-repeat">
+                                class="mx-auto flex justify-center w-[141px] h-[141px] bg-blue-300/20 rounded-full bg-[url('@/assets/image/profile.jpg')] bg-cover bg-center bg-no-repeat">
 
                                 <div class="bg-white/90 rounded-full w-6 h-6 text-center ml-28 mt-4">
 

@@ -73,8 +73,6 @@ const handleSubmit = async () => {
         emergency_contact: form.emergency_contact.name + " " + form.emergency_contact.phone,
         status: form.status
     }
-    
-    console.log(newStudent)
     try {
         await axios.post('/api/students', newStudent);
         router.push('/students-view');

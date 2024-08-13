@@ -30,6 +30,15 @@ const setTitle = () => {
     case 'Courses View':
       title.value = 'Course Management'
       break;
+    case 'Course View':
+      title.value = 'Course Details'
+      break;
+    case 'Course Create':
+      title.value = 'Course Create Form'
+      break;
+    case 'Course Edit':
+      title.value = 'Course Edit Form'
+      break;
     // Add cases for other routes
     default:
       title.value = 'Error';
