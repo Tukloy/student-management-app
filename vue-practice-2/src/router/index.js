@@ -6,6 +6,9 @@ import StudentCreate from '@/components/StudentCreate.vue';
 import InstructorsView from '@/views/InstructorsView.vue';
 import InstructorCreate from "@/components/InstructorCreate.vue";
 import CoursesView from "@/views/CoursesView.vue";
+import CourseView from "@/components/CourseView.vue";
+import CourseCreate from '@/components/CourseCreate.vue';
+import CourseEdit from '@/components/CourseEdit.vue';
 import NotFoundView from '@/views/NotFoundView.vue';
 
 const router = createRouter({
@@ -45,6 +48,21 @@ const router = createRouter({
       path: "/courses-view",
       name: "Courses View",
       component: CoursesView,
+    },
+    {
+      path: "/courses-view/:id",
+      name: "Course View",
+      component: CourseView,
+    },
+    {
+      path: "/courses-create",
+      name: "Course Create",
+      component: CourseCreate,
+    },
+    {
+      path: "/courses-edit/:id",
+      name: "Course Edit",
+      component: CourseEdit,
     },
     {
       path: '/:catchAll(.*)',

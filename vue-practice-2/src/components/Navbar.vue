@@ -83,9 +83,7 @@ onBeforeUnmount(() => {
                 </div>
                 <!-- <i class="pi pi-user"></i> -->
                 <button @click="toggleDropdown">
-                    <img class="rounded-full"
-                        src="https://scontent.fmnl9-1.fna.fbcdn.net/v/t39.30808-6/317735488_6293198287376054_8420692245888528439_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEEWe8bHY0sDfUQ2rjglTidkzZKJLUiCTKTNkoktSIJMjUpQB_zamhLMDNeYwowQNvcYqLdMpy4k7_jAB8D6fH-&_nc_ohc=T22UE3OsaDsQ7kNvgF90sFj&_nc_ht=scontent.fmnl9-1.fna&oh=00_AYCh5ZQZgkr5HziIaKnq5BXCHudd8_U450sFhx3qu7IcQg&oe=66B9451D"
-                        alt="">
+                    <img class="rounded-full" src="@/assets/image/profile.jpg" alt="">
                 </button>
             </div>
         </div>

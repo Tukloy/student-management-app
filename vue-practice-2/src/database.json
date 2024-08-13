@@ -245,18 +245,6 @@
       "id": "19"
     },
     {
-      "student_id": "S020",
-      "firstname": "Rachel",
-      "lastname": "White",
-      "gender": "Female",
-      "phone": "124567890",
-      "address": "1717 Spruce St, Springfield, IL",
-      "email": "rachel.white@example.com",
-      "emergency_contact": "Matthew White - 9876543210",
-      "status": "Active",
-      "id": "20"
-    },
-    {
       "id": "21",
       "student_id": "S021",
       "firstname": "Rheyvince Lawrence",
@@ -307,16 +295,16 @@
   ],
   "instructors": [
     {
-      "id": "1",
       "instructor_id": "I001",
       "firstname": "Alan",
-      "lastname": "Turing",
+      "lastname": "Turings",
       "gender": "Male",
       "phone": "1112223333",
-      "email": "alan.turing@example.com",
       "address": "123 Computation Ln, Cambridge, UK",
+      "email": "alan.turing@example.com",
       "department": "Computer Science",
-      "type": "Part-Time"
+      "type": "Part-Time",
+      "id": "1"
     },
     {
       "id": "2",
@@ -488,7 +476,7 @@
     },
     {
       "id": "16",
-      "instructor_id": "S016",
+      "instructor_id": "I016",
       "firstname": "Fatima",
       "lastname": "Sabariaga",
       "course": "BSARCH",
@@ -509,6 +497,18 @@
       "email": "faweref@mailinator.com",
       "address": "Jael Octavius Cheryl Joelle Clare 77256",
       "type": "Full-Time"
+    },
+    {
+      "id": "18",
+      "instructor_id": "I018",
+      "firstname": "Dom",
+      "lastname": "Panget",
+      "course": "BSMB",
+      "gender": "Male",
+      "phone": 91238917318,
+      "email": "dompotsu@gmail.com",
+      "address": "0020 centro brgy 163 San Pablo Laguna 4008",
+      "type": "Full-Time"
     }
   ],
   "courses": [
@@ -516,252 +516,539 @@
       "id": "1",
       "course_id": "ENG101",
       "name": "English Composition",
-      "description": "This course focuses on developing writing skills, including essay structure, grammar, and argumentation.",
+      "description": "This course focuses on developing essential writing skills, including crafting coherent essays, mastering grammar and punctuation, and constructing persuasive arguments. Students will engage in various writing exercises that emphasize clarity, coherence, and stylistic precision. The course also covers research techniques and proper citation methods, preparing students for academic writing across disciplines. By the end of the course, students will have honed their ability to express complex ideas effectively and critically evaluate written content.",
       "credits": 3,
-      "category": "General Education"
+      "category": "General Education",
+      "instructor_id": "I001",
+      "schedule": {
+        "days": [
+          "Monday",
+          "Wednesday",
+          "Friday"
+        ],
+        "time": "10:00 AM - 11:30 AM",
+        "location": "Room 203, Main Building"
+      },
+      "semester": "Fall 2024",
+      "status": "Active",
+      "department": "English Department",
+      "evaluation_method": "Exams, Assignments, Participation"
     },
     {
-      "id": "2",
       "course_id": "MATH101",
       "name": "College Algebra",
-      "description": "An introductory course in algebra, covering functions, equations, inequalities, and graphing.",
-      "credits": 3,
-      "category": "Mathematics"
+      "description": "An introductory course in algebra designed to build a strong foundation in mathematical concepts and problem-solving skills. The course covers topics such as functions, equations, inequalities, and graphing techniques. Students will learn to manipulate algebraic expressions, solve quadratic and linear equations, and analyze functions using various methods. Emphasis is placed on developing critical thinking skills and applying algebraic concepts to real-world scenarios. By the end of the course, students will be prepared to tackle more advanced mathematical courses and practical applications.",
+      "credits": "3",
+      "category": "Mathematics",
+      "instructor_id": "I002",
+      "schedule": {
+        "days": [
+          "Tuesday",
+          "Thursday",
+          "Saturday"
+        ],
+        "time": "9:00 AM - 10:15 AM",
+        "location": "Room 105, Science Building"
+      },
+      "semester": "2nd Sem",
+      "status": "Inactive",
+      "department": "Mathematics Department",
+      "evaluation_method": "Exams, Quizzes, Homework",
+      "id": "2"
     },
     {
-      "id": "3",
       "course_id": "HIST101",
       "name": "World History",
-      "description": "A survey of world history from ancient civilizations to the modern era, focusing on key events and developments.",
-      "credits": 3,
-      "category": "Social Sciences"
+      "description": "A comprehensive survey of world history that spans from ancient civilizations to the modern era. The course examines key events, cultural developments, and influential figures that have shaped the course of human history. Topics include the rise and fall of empires, the impact of religious and philosophical movements, the evolution of political systems, and the effects of global conflicts. Students will engage with primary and secondary sources, develop historical analysis skills, and explore the interconnectedness of global events. By the end of the course, students will have a deeper understanding of the historical forces that continue to influence the world today.",
+      "credits": "3",
+      "category": "Social Sciences",
+      "instructor_id": "I003",
+      "schedule": {
+        "days": [
+          "Monday",
+          "Wednesday"
+        ],
+        "time": "1:00 PM - 2:30 PM",
+        "location": "Room 304, History Building"
+      },
+      "semester": "Fall 2024",
+      "status": "Active",
+      "department": "History Department",
+      "evaluation_method": "Exams, Essays, Participation",
+      "id": "3"
     },
     {
       "id": "4",
       "course_id": "BIO101",
       "name": "General Biology",
-      "description": "An introductory course on biological principles, including cell structure, genetics, and evolution.",
+      "description": "An introductory course on the fundamental principles of biology, exploring topics such as cell structure and function, genetics, evolution, and ecology. The course provides a comprehensive overview of biological concepts, with a focus on the scientific method and critical thinking. Students will engage in laboratory exercises that reinforce lecture material and develop hands-on skills in biological research. Topics include the structure and function of DNA, mechanisms of inheritance, and the diversity of life forms. By the end of the course, students will have a solid foundation in biology and an appreciation for the complexity and diversity of life on Earth.",
       "credits": 3,
-      "category": "Natural Sciences"
+      "category": "Natural Sciences",
+      "instructor_id": "I004",
+      "schedule": {
+        "days": [
+          "Tuesday",
+          "Thursday"
+        ],
+        "time": "11:00 AM - 12:30 PM",
+        "location": "Room 210, Biology Building"
+      },
+      "semester": "Fall 2024",
+      "status": "Active",
+      "department": "Biology Department",
+      "evaluation_method": "Exams, Lab Reports, Participation"
     },
     {
       "id": "5",
       "course_id": "CHEM101",
       "name": "General Chemistry I",
-      "description": "A foundational course in chemistry, covering atomic structure, chemical bonding, and thermodynamics.",
+      "description": "A foundational course in chemistry that introduces students to the principles of chemical bonding, atomic structure, and thermodynamics. The course covers key topics such as the periodic table, chemical reactions, stoichiometry, and the laws of thermodynamics. Students will engage in laboratory experiments that illustrate theoretical concepts and develop practical skills in chemical analysis. The course also explores the role of chemistry in everyday life and its applications in various industries. By the end of the course, students will have a strong understanding of chemical principles and be prepared for more advanced studies in chemistry and related fields.",
       "credits": 3,
-      "category": "Natural Sciences"
+      "category": "Natural Sciences",
+      "instructor_id": "I005",
+      "schedule": {
+        "days": [
+          "Wednesday",
+          "Friday"
+        ],
+        "time": "2:00 PM - 3:30 PM",
+        "location": "Room 101, Chemistry Building"
+      },
+      "semester": "Fall 2024",
+      "status": "Active",
+      "department": "Chemistry Department",
+      "evaluation_method": "Exams, Lab Work, Assignments"
     },
     {
       "id": "6",
       "course_id": "PSYC101",
       "name": "Introduction to Psychology",
-      "description": "This course provides an overview of psychological theories, research methods, and applications.",
+      "description": "This course provides an overview of the fundamental concepts and theories in psychology, exploring topics such as cognition, behavior, emotion, and mental health. Students will examine the scientific methods used in psychological research and gain insight into the biological, social, and environmental factors that influence behavior. The course covers key areas such as developmental psychology, personality theory, and psychological disorders. Through lectures, discussions, and research projects, students will develop a deeper understanding of human behavior and the psychological principles that underlie everyday life. By the end of the course, students will be equipped with the knowledge to critically evaluate psychological research and its applications.",
       "credits": 3,
-      "category": "Social Sciences"
+      "category": "Social Sciences",
+      "instructor_id": "I006",
+      "schedule": {
+        "days": [
+          "Monday",
+          "Wednesday",
+          "Friday"
+        ],
+        "time": "9:00 AM - 10:00 AM",
+        "location": "Room 302, Psychology Building"
+      },
+      "semester": "Fall 2024",
+      "status": "Active",
+      "department": "Psychology Department",
+      "evaluation_method": "Exams, Research Papers, Participation"
     },
     {
       "id": "7",
       "course_id": "PHIL101",
       "name": "Introduction to Philosophy",
-      "description": "An exploration of fundamental philosophical questions and concepts, including ethics, logic, and metaphysics.",
+      "description": "An exploration of fundamental philosophical questions and concepts, including ethics, logic, and metaphysics. The course covers major philosophical traditions and thinkers, examining topics such as the nature of reality, the existence of God, the foundations of morality, and the limits of human knowledge. Students will engage with primary philosophical texts, develop critical thinking skills, and participate in discussions on contemporary philosophical issues. By the end of the course, students will have a deeper understanding of the philosophical questions that have shaped human thought and continue to influence our understanding of the world.",
       "credits": 3,
-      "category": "Humanities"
+      "category": "Humanities",
+      "instructor_id": "I007",
+      "schedule": {
+        "days": [
+          "Tuesday",
+          "Thursday"
+        ],
+        "time": "3:00 PM - 4:30 PM",
+        "location": "Room 201, Philosophy Building"
+      },
+      "semester": "Fall 2024",
+      "status": "Active",
+      "department": "Philosophy Department",
+      "evaluation_method": "Essays, Exams, Participation"
     },
     {
       "id": "8",
       "course_id": "ECON101",
       "name": "Principles of Economics",
-      "description": "An introduction to microeconomics and macroeconomics, focusing on supply and demand, market structures, and economic policies.",
+      "description": "An introduction to the fundamental concepts of microeconomics and macroeconomics. The course explores topics such as supply and demand, market structures, economic policies, and the role of government in the economy. Students will learn to analyze economic data, understand the behavior of consumers and firms, and evaluate the impact of economic policies on various sectors of the economy. The course also covers global economic issues, such as trade, inflation, and unemployment. By the end of the course, students will be equipped with the analytical tools to understand and interpret economic trends and make informed decisions in a complex economic environment.",
       "credits": 3,
-      "category": "Social Sciences"
+      "category": "Social Sciences",
+      "instructor_id": "I008",
+      "schedule": {
+        "days": [
+          "Monday",
+          "Wednesday"
+        ],
+        "time": "11:00 AM - 12:30 PM",
+        "location": "Room 102, Economics Building"
+      },
+      "semester": "Fall 2024",
+      "status": "Active",
+      "department": "Economics Department",
+      "evaluation_method": "Exams, Homework, Participation"
     },
     {
       "id": "9",
       "course_id": "ART101",
       "name": "Introduction to Visual Arts",
-      "description": "A course exploring the history, techniques, and appreciation of visual arts from various cultures and periods.",
+      "description": "A course exploring the history, techniques, and appreciation of visual arts from various cultures and periods. Students will study different forms of visual expression, including painting, sculpture, and architecture, and learn to critically analyze works of art. The course covers significant artistic movements, from ancient to contemporary, and examines the cultural and historical contexts that influenced these movements. Through lectures, discussions, and hands-on projects, students will develop an understanding of the creative process and the role of visual arts in society. By the end of the course, students will be able to appreciate and interpret visual art with a deeper understanding of its aesthetic and cultural significance.",
       "credits": 3,
-      "category": "Arts"
+      "category": "Arts",
+      "instructor_id": "I009",
+      "schedule": {
+        "days": [
+          "Tuesday",
+          "Thursday"
+        ],
+        "time": "1:00 PM - 2:30 PM",
+        "location": "Room 110, Arts Building"
+      },
+      "semester": "Fall 2024",
+      "status": "Active",
+      "department": "Arts Department",
+      "evaluation_method": "Projects, Exams, Participation"
     },
     {
       "id": "10",
       "course_id": "PHYS101",
       "name": "General Physics I",
-      "description": "An introductory course on classical mechanics, covering forces, motion, energy, and momentum.",
+      "description": "An introductory course on classical mechanics, covering fundamental concepts such as forces, motion, energy, and momentum. The course provides a rigorous foundation in physics, emphasizing problem-solving and the application of mathematical principles to physical phenomena. Students will explore topics such as Newton's laws of motion, work and energy, rotational dynamics, and the principles of conservation. Laboratory sessions will complement the theoretical material, allowing students to experiment with and observe physical laws in action. By the end of the course, students will have a solid understanding of classical mechanics and be prepared for more advanced studies in physics and engineering.",
       "credits": 4,
-      "category": "Natural Sciences"
+      "category": "Natural Sciences",
+      "instructor_id": "I010",
+      "schedule": {
+        "days": [
+          "Monday",
+          "Wednesday",
+          "Friday"
+        ],
+        "time": "10:00 AM - 11:30 AM",
+        "location": "Room 205, Physics Building"
+      },
+      "semester": "Fall 2024",
+      "status": "Active",
+      "department": "Physics Department",
+      "evaluation_method": "Exams, Lab Work, Assignments"
     },
     {
       "id": "11",
       "course_id": "SOC101",
       "name": "Introduction to Sociology",
-      "description": "This course examines the structure of human society, including social institutions, culture, and socialization.",
+      "description": "This course examines the structure of human society, including social institutions, culture, and socialization. Students will explore key sociological theories and concepts, such as social stratification, deviance, and social change. The course emphasizes the role of culture in shaping human behavior and the ways in which individuals and groups interact within society. Through case studies, research projects, and discussions, students will develop an understanding of the complexities of social life and the factors that influence social behavior. By the end of the course, students will be equipped to analyze social phenomena critically and understand the impact of societal structures on individual and collective experiences.",
       "credits": 3,
-      "category": "Social Sciences"
+      "category": "Social Sciences",
+      "instructor_id": "I011",
+      "schedule": {
+        "days": [
+          "Tuesday",
+          "Thursday"
+        ],
+        "time": "2:00 PM - 3:30 PM",
+        "location": "Room 108, Sociology Building"
+      },
+      "semester": "Fall 2024",
+      "status": "Active",
+      "department": "Sociology Department",
+      "evaluation_method": "Exams, Research Papers, Participation"
     },
     {
       "id": "12",
       "course_id": "MUS101",
       "name": "Music Appreciation",
-      "description": "An introduction to music, focusing on the history, theory, and cultural significance of various musical genres.",
+      "description": "An introduction to music, focusing on the history, theory, and cultural significance of various musical genres. The course covers a wide range of musical styles, from classical to contemporary, and explores the role of music in different cultural contexts. Students will learn to listen to and analyze music critically, developing an understanding of musical form, harmony, rhythm, and melody. The course also examines the lives and works of significant composers and musicians, as well as the impact of technological advancements on music production and distribution. By the end of the course, students will have a deeper appreciation for music and its role in human expression and cultural identity.",
       "credits": 2,
-      "category": "Arts"
+      "category": "Arts",
+      "instructor_id": "I012",
+      "schedule": {
+        "days": [
+          "Wednesday",
+          "Friday"
+        ],
+        "time": "11:00 AM - 12:00 PM",
+        "location": "Room 301, Music Building"
+      },
+      "semester": "Fall 2024",
+      "status": "Active",
+      "department": "Music Department",
+      "evaluation_method": "Exams, Listening Assignments, Participation"
     },
     {
       "id": "13",
       "course_id": "SPAN101",
       "name": "Introduction to Spanish",
-      "description": "A beginner's course in Spanish language and culture, focusing on basic vocabulary, grammar, and communication skills.",
+      "description": "A beginner's course in Spanish language and culture, focusing on basic vocabulary, grammar, and communication skills. The course is designed for students with little or no prior knowledge of Spanish and aims to develop foundational language skills through interactive exercises, dialogues, and cultural immersion. Students will learn to speak, read, and write in Spanish, with an emphasis on practical communication for everyday situations. The course also explores the rich cultural heritage of Spanish-speaking countries, including their history, traditions, and contemporary issues. By the end of the course, students will have acquired basic language proficiency and a deeper appreciation for the diversity of the Spanish-speaking world.",
       "credits": 3,
-      "category": "Languages"
+      "category": "Foreign Languages",
+      "instructor_id": "I013",
+      "schedule": {
+        "days": [
+          "Monday",
+          "Wednesday"
+        ],
+        "time": "1:00 PM - 2:30 PM",
+        "location": "Room 206, Language Building"
+      },
+      "semester": "Fall 2024",
+      "status": "Active",
+      "department": "Language Department",
+      "evaluation_method": "Exams, Quizzes, Participation"
     },
     {
       "id": "14",
       "course_id": "COMP101",
-      "name": "Introduction to Computer Science",
-      "description": "An overview of computer science principles, including programming, algorithms, and data structures.",
+      "name": "Computer Science",
+      "description": "This course provides a comprehensive introduction to the field of computer science. Students will explore fundamental concepts such as programming basics, algorithm design, and data structures. Emphasis will be placed on problem-solving techniques and computational thinking, with practical applications in various programming languages. The course also covers the ethical and social implications of technology, preparing students for more advanced topics in computer science. By the end of the course, students will have gained a solid foundation in computer science principles and practical coding skills.",
       "credits": 3,
-      "category": "Mathematics"
+      "category": "Mathematics",
+      "instructor_id": "I014",
+      "schedule": {
+        "days": [
+          "Monday",
+          "Wednesday",
+          "Friday"
+        ],
+        "time": "9:00 AM - 10:00 AM",
+        "location": "Room 110, Computer Science Building"
+      },
+      "semester": "Fall 2024",
+      "status": "Active",
+      "department": "Computer Science Department",
+      "evaluation_method": "Exams, Coding Assignments, Projects"
     },
     {
       "id": "15",
       "course_id": "ANTH101",
       "name": "Cultural Anthropology",
-      "description": "An introduction to the study of human cultures, focusing on social practices, beliefs, and cultural diversity.",
+      "description": "This course introduces students to the study of human cultures through the lens of anthropology. It covers key topics such as social structures, rituals, beliefs, and cultural diversity across different societies. Students will engage with various theoretical approaches and research methods used in anthropology to understand and analyze human behavior and cultural practices. The course aims to foster an appreciation of cultural differences and similarities while critically examining the role of anthropology in contemporary issues. By the end of the course, students will have developed a deeper understanding of the complexity of human cultures and the anthropological perspective.",
       "credits": 3,
-      "category": "Social Sciences"
+      "category": "Social Sciences",
+      "instructor_id": "I015",
+      "schedule": {
+        "days": [
+          "Tuesday",
+          "Thursday"
+        ],
+        "time": "1:00 PM - 2:30 PM",
+        "location": "Room 205, Anthropology Building"
+      },
+      "semester": "Fall 2024",
+      "status": "Active",
+      "department": "Anthropology Department",
+      "evaluation_method": "Exams, Essays, Participation"
     },
     {
       "id": "16",
       "course_id": "ENV101",
-      "name": "Introduction to Environmental Science",
-      "description": "This course explores environmental issues, sustainability, and the impact of human activity on the environment.",
+      "name": "Environmental Science",
+      "description": "In this course, students will investigate the critical environmental challenges facing our planet today. Topics include environmental sustainability, climate change, pollution, and the impact of human activities on natural ecosystems. The course integrates scientific principles with real-world case studies to provide students with a comprehensive understanding of environmental issues and potential solutions. Students will also learn about environmental policies, conservation efforts, and the role of individuals and communities in promoting sustainability. By the end of the course, students will be equipped to contribute to discussions and actions aimed at addressing environmental concerns.",
       "credits": 3,
-      "category": "Natural Sciences"
+      "category": "Natural Sciences",
+      "instructor_id": "I016",
+      "schedule": {
+        "days": [
+          "Monday",
+          "Wednesday"
+        ],
+        "time": "11:00 AM - 12:30 PM",
+        "location": "Room 310, Environmental Science Building"
+      },
+      "semester": "Fall 2024",
+      "status": "Active",
+      "department": "Environmental Science Department",
+      "evaluation_method": "Exams, Projects, Participation"
     },
     {
       "id": "17",
       "course_id": "LIT101",
       "name": "Introduction to Literature",
-      "description": "An exploration of major literary works, including poetry, drama, and prose from various periods.",
+      "description": "This course offers an exploration of significant literary works across various genres, including poetry, drama, and prose. Students will engage with texts from different historical periods and cultural contexts to understand the evolution of literary forms and themes. The course emphasizes critical reading and analysis, encouraging students to examine literary techniques, narrative structures, and thematic content. Students will also explore the cultural and historical contexts that influence literary production and interpretation. By the end of the course, students will have developed strong analytical skills and a deeper appreciation for the literary arts.",
       "credits": 3,
-      "category": "Humanities"
+      "category": "Humanities",
+      "instructor_id": "I017",
+      "schedule": {
+        "days": [
+          "Tuesday",
+          "Thursday"
+        ],
+        "time": "10:00 AM - 11:30 AM",
+        "location": "Room 120, Literature Building"
+      },
+      "semester": "Fall 2024",
+      "status": "Active",
+      "department": "Literature Department",
+      "evaluation_method": "Essays, Exams, Participation"
     },
     {
       "id": "18",
       "course_id": "STAT101",
       "name": "Introduction to Statistics",
-      "description": "A course covering basic statistical concepts, including data analysis, probability, and hypothesis testing.",
+      "description": "This course introduces students to fundamental concepts in statistics, including descriptive statistics, probability theory, and inferential methods. Students will learn to collect, analyze, and interpret data using various statistical techniques and software tools. The course emphasizes practical applications of statistical methods in various fields, such as business, social sciences, and health sciences. Through hands-on assignments and projects, students will gain experience in data analysis and develop skills to make informed decisions based on statistical evidence. By the end of the course, students will have a strong foundation in statistical reasoning and data analysis.",
       "credits": 3,
-      "category": "Mathematics"
+      "category": "Mathematics",
+      "instructor_id": "I015",
+      "schedule": {
+        "days": [
+          "Monday",
+          "Wednesday"
+        ],
+        "time": "2:00 PM - 3:30 PM",
+        "location": "Room 130, Mathematics Building"
+      },
+      "semester": "Fall 2024",
+      "status": "Active",
+      "department": "Mathematics Department",
+      "evaluation_method": "Exams, Quizzes, Homework"
     },
     {
       "id": "19",
       "course_id": "GEO101",
       "name": "World Geography",
-      "description": "This course covers the physical and human geography of the world, focusing on regions, cultures, and global issues.",
+      "description": "This course provides a comprehensive overview of world geography, focusing on physical landscapes, human geography, and regional studies. Students will examine the interactions between people and their environments, exploring topics such as climate, landforms, urbanization, and cultural landscapes. The course also addresses global issues such as migration, environmental change, and geopolitical conflicts. Students will develop a better understanding of the spatial patterns and processes that shape the world, as well as the diverse cultural and environmental contexts that influence human activities. By the end of the course, students will be equipped to analyze and interpret geographical information on a global scale.",
       "credits": 3,
-      "category": "Social Sciences"
+      "category": "Social Sciences",
+      "instructor_id": "I016",
+      "schedule": {
+        "days": [
+          "Tuesday",
+          "Thursday"
+        ],
+        "time": "3:00 PM - 4:30 PM",
+        "location": "Room 140, Geography Building"
+      },
+      "semester": "Fall 2024",
+      "status": "Active",
+      "department": "Geography Department",
+      "evaluation_method": "Exams, Projects, Participation"
     },
     {
       "id": "20",
       "course_id": "THEO101",
       "name": "Introduction to Theology",
-      "description": "An exploration of theological concepts, religious practices, and the role of religion in society.",
+      "description": "This course explores the fundamental concepts and diverse perspectives within the study of theology. Topics include major religious traditions, theological methods, and the role of religion in historical and contemporary contexts. Students will examine various theological approaches, religious texts, and philosophical questions related to faith and spirituality. The course aims to foster critical thinking about religious beliefs and practices while promoting an understanding of their impact on individual and collective experiences. By the end of the course, students will have gained insights into the nature of theology and its significance in the broader cultural and societal framework.",
       "credits": 3,
-      "category": "Humanities"
+      "category": "Humanities",
+      "instructor_id": "I017",
+      "schedule": {
+        "days": [
+          "Monday",
+          "Wednesday"
+        ],
+        "time": "1:00 PM - 2:30 PM",
+        "location": "Room 150, Theology Building"
+      },
+      "semester": "Fall 2024",
+      "status": "Active",
+      "department": "Theology Department",
+      "evaluation_method": "Essays, Exams, Participation"
+    },
+    {
+      "course_id": "BIO102",
+      "name": "Biology and Friends",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, nemo necessitatibus similique illo iste magnam eius eveniet dolorum culpa, reiciendis tenetur ipsum maiores. Nemo earum dicta perspiciatis adipisci quod harum ipsam eligendi dolor quisquam error aperiam nisi rem eveniet tempora, molestias expedita voluptas similique inventore? A nulla architecto perspiciatis voluptatum?\n",
+      "credits": "3",
+      "category": "Natural Sciences",
+      "instructor_id": "I016",
+      "schedule": {
+        "days": [
+          "Monday",
+          "Wednesday",
+          "Friday"
+        ],
+        "time": "10:30 AM - 12:30 PM",
+        "location": "Canteen"
+      },
+      "semester": "Fall 2024",
+      "status": "Active",
+      "department": "Biology Department",
+      "evaluation_method": "Exam, Quiz, Research Paper",
+      "id": "21"
     }
   ],
   "departments": [
     {
       "id": "1",
       "department_id": "CS",
-      "name": "Department of Computer Science",
+      "name": "Computer Science Department",
       "description": "This department focuses on the study and research of computer science, including programming, algorithms, data structures, and software engineering."
     },
     {
       "id": "2",
       "department_id": "MATH",
-      "name": "Department of Mathematics",
-      "description": "The Department of Mathematics offers courses and research opportunities in pure and applied mathematics, including algebra, calculus, and statistics."
+      "name": "Mathematics Department",
+      "description": "The Mathematics Department offers courses and research opportunities in pure and applied mathematics, including algebra, calculus, and statistics."
     },
     {
       "id": "3",
       "department_id": "BIO",
-      "name": "Department of Biology",
+      "name": "Biology Department",
       "description": "This department covers various fields in biological sciences, including genetics, ecology, molecular biology, and environmental science."
     },
     {
       "id": "4",
       "department_id": "CHEM",
-      "name": "Department of Chemistry",
-      "description": "The Department of Chemistry provides education and research in chemical sciences, including organic, inorganic, physical, and analytical chemistry."
+      "name": "Chemistry Department",
+      "description": "The Chemistry Department provides education and research in chemical sciences, including organic, inorganic, physical, and analytical chemistry."
     },
     {
       "id": "5",
       "department_id": "PHYS",
-      "name": "Department of Physics",
+      "name": "Physics Department",
       "description": "This department offers courses and conducts research in physics, covering classical mechanics, electromagnetism, quantum mechanics, and thermodynamics."
     },
     {
       "id": "6",
       "department_id": "ENG",
-      "name": "Department of English",
-      "description": "The Department of English focuses on the study of literature, language, and writing, offering courses in English literature, creative writing, and linguistics."
+      "name": "English Department",
+      "description": "The English Department focuses on the study of literature, language, and writing, offering courses in English literature, creative writing, and linguistics."
     },
     {
       "id": "7",
       "department_id": "HIST",
-      "name": "Department of History",
+      "name": "History Department",
       "description": "This department offers a comprehensive study of historical events, cultures, and societies, with courses in world history, regional history, and historical research methods."
     },
     {
       "id": "8",
       "department_id": "ECON",
-      "name": "Department of Economics",
-      "description": "The Department of Economics provides education in economic theory, econometrics, and policy analysis, with research opportunities in microeconomics and macroeconomics."
+      "name": "Economics Department",
+      "description": "The Economics Department provides education in economic theory, econometrics, and policy analysis, with research opportunities in microeconomics and macroeconomics."
     },
     {
       "id": "9",
       "department_id": "PSYC",
-      "name": "Department of Psychology",
+      "name": "Psychology Department",
       "description": "This department focuses on the study of human behavior, cognition, and emotion, offering courses in developmental, clinical, and social psychology."
     },
     {
       "id": "10",
       "department_id": "PHIL",
-      "name": "Department of Philosophy",
-      "description": "The Department of Philosophy explores fundamental questions about existence, knowledge, and ethics, with courses in logic, metaphysics, and moral philosophy."
+      "name": "Philosophy Department",
+      "description": "The Philosophy Department explores fundamental questions about existence, knowledge, and ethics, with courses in logic, metaphysics, and moral philosophy."
     },
     {
       "id": "11",
       "department_id": "SOC",
-      "name": "Department of Sociology",
+      "name": "Sociology Department",
       "description": "This department examines social structures, institutions, and relationships, offering courses in social theory, research methods, and sociology of various social issues."
     },
     {
       "id": "12",
       "department_id": "ART",
-      "name": "Department of Visual Arts",
-      "description": "The Department of Visual Arts provides education in art history, studio art, and design, with courses in painting, sculpture, and digital media."
+      "name": "Visual Arts Department",
+      "description": "The Visual Arts Department provides education in art history, studio art, and design, with courses in painting, sculpture, and digital media."
     },
     {
       "id": "13",
       "department_id": "MUS",
-      "name": "Department of Music",
+      "name": "Music Department",
       "description": "This department offers courses and performance opportunities in music theory, history, and practice, covering various genres and instruments."
     },
     {
       "id": "14",
       "department_id": "BUS",
-      "name": "Department of Business Administration",
-      "description": "The Department of Business Administration provides education in business management, finance, marketing, and entrepreneurship, with opportunities for research and practical experience."
+      "name": "Business Administration Department",
+      "description": "The Business Administration Department provides education in business management, finance, marketing, and entrepreneurship, with opportunities for research and practical experience."
     },
     {
       "id": "15",
       "department_id": "ENV",
-      "name": "Department of Environmental Science",
+      "name": "Environmental Science Department",
       "description": "This department focuses on the study of environmental processes, sustainability, and the impact of human activity on the environment, with courses in ecology, conservation, and environmental policy."
     }
   ]

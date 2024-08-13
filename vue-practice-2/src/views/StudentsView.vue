@@ -128,6 +128,10 @@ const handleSubmit = async () => {
         toggleEditMode();
     }
 }
+const truncateText = (text, length) => {
+    const result = text.length > length ? text.substring(0, length) + '...' : text;
+    return result;
+};
 onMounted(() => {
     getStudentsData();
 });
@@ -291,7 +295,7 @@ const toggleModal = () => {
                             <td class="py-2 px-4 whitespace-nowrap text-sm">{{ student.firstname + " " + student.lastname }}</td>
                             <td class="py-2 px-4 whitespace-nowrap text-sm">{{ student.email }}</td>
                             <td class="py-2 px-4 whitespace-nowrap text-sm">{{ student.phone }}</td>
-                            <td class="py-2 px-4 whitespace-nowrap text-sm">{{ student.address }}</td>
+                            <td class="py-2 px-4 whitespace-nowrap text-sm">{{ truncateText(student.address, 24) }}</td>
                             <td class='py-1 px-1 text-center'>
                                 <div :class="{
                                     'rounded-full text-sm text-center font-bold rounded-lg px-1 py-1': true,
