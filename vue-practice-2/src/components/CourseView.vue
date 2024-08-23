@@ -1,6 +1,6 @@
 <script setup>
 import PulseLoader from 'vue-spinner/src/PulseLoader.vue';
-import { reactive, onMounted, computed } from 'vue';
+import { reactive, onMounted, computed, watch } from 'vue';
 import { useRoute, useRouter, RouterLink } from 'vue-router';
 import { useToast } from 'vue-toastification';
 import generalEducationImg from '@/assets/image/general education.png';
@@ -10,7 +10,6 @@ import humanitiesImg from '@/assets/image/humanities.png';
 import mathematicsImg from '@/assets/image/mathematics.png';
 import naturalScienceImg from '@/assets/image/natural science.png';
 import socialScienceImg from '@/assets/image/social science.png'
-import { watch } from 'vue';
 import axios from 'axios';
 
 const route = useRoute();
@@ -111,13 +110,13 @@ onMounted(() => {
                     <div class="flex w-full gap-x-4 justify-between mb-8">
                         <div class="text-gray-700 text-md w-[70%]">
                             <label class="block mb-3">Course ID: <span class="font-bold text-xl">{{
-                                    state.course.course_id }}</span></label>
+                                state.course.course_id }}</span></label>
                             <label class="block">Name: <span class="font-semibold">{{ state.course.name
                                     }}</span></label>
                             <label class="block">Category: <span class="font-semibold">{{ state.course.category
                                     }}</span></label>
                             <label class="block mb-6">Credits: <span class="text-md font-semibold">{{
-                                    state.course.credits }}</span></label>
+                                state.course.credits }}</span></label>
                             <label class="block">Schedule:</label>
                             <label class="block">Days: <span class="font-medium">{{ state.course.schedule.days
                                     }}</span></label>

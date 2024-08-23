@@ -9,6 +9,10 @@ defineProps({
     modalActive: {
         type: Boolean,
         default: false
+    },
+    size: {
+        type: String,
+        default: '45%'
     }
 });
 
@@ -25,9 +29,9 @@ const handleOverlayClick = (event) => {
     <Teleport to="body">
         <Transition name="modal-outer">
             <div v-show="modalActive" @click="handleOverlayClick"
-                class="absolute w-full bg-gray-800/60 top-0 left-0 z-50 flex justify-center items-center w-full md:inset-0 h-[calc(100%)] h-screen">
+                class="absolute w-full bg-gray-800/60 top-0 left-0 z-50 flex justify-center items-center md:inset-0">
                 <Transition name="modal-inner">
-                    <div v-if="modalActive" class="relative p-4 w-full max-w-3xl max-h-full">
+                    <div v-if="modalActive" class="p-4" :style="{ width: size }">
                         <div class="relative bg-white rounded-lg shadow ">
                             <div class="flex items-center justify-between p-6 md:p-8 border-b rounded-t">
                                 <h3 class="text-2xl font-semibold text-gray-900">

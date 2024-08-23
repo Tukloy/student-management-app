@@ -42,7 +42,6 @@ const getCourseId = async () => {
         // Compute the last ID immediately after setting the state
         const lastId = Math.max(...state.courses.map(course => parseInt(course.id, 10))) + 1;
         form.id = lastId;
-        //Flood data
 
     } catch (error) {
         console.error('Error fetching course Id', error);
@@ -211,35 +210,35 @@ onMounted(() => {
                             <div class="flex items-center">
                                 <input type="checkbox" v-model="form.schedule.days" value="Monday"
                                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                <label class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-300">Monday</label>
+                                <label class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-900">Monday</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox" v-model="form.schedule.days" value="Tuesday"
                                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                <label class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-300">Tuesday</label>
+                                <label class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-900">Tuesday</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox" v-model="form.schedule.days" value="Wednesday"
                                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                 <label
-                                    class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-300">Wednesday</label>
+                                    class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-900">Wednesday</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox" v-model="form.schedule.days" value="Thursday"
                                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                 <label
-                                    class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-300">Thursday</label>
+                                    class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-900">Thursday</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox" v-model="form.schedule.days" value="Friday"
                                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                <label class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-300">Friday</label>
+                                <label class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-900">Friday</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox" v-model="form.schedule.days" value="Saturday"
                                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                 <label
-                                    class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-300">Saturday</label>
+                                    class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-900">Saturday</label>
                             </div>
                         </div>
                     </div>
@@ -257,8 +256,8 @@ onMounted(() => {
                     </div>
                     <div>
                         <label class="block mb-2 text-sm font-medium text-gray-900">Status:</label>
-                        <select v-model="form.status" 
-                        class="border border-gray-300 text-sm rounded focus:ring-blue-500 focus:border-blue-500  focus:outline-none block w-full p-2.5">
+                        <select v-model="form.status"
+                            class="border border-gray-300 text-sm rounded focus:ring-blue-500 focus:border-blue-500  focus:outline-none block w-full p-2.5">
                             <option value="Active">Active</option>
                             <option vlaue="Inactive">Inactive</option>
                         </select>

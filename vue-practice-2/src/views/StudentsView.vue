@@ -153,7 +153,7 @@ const toggleModal = () => {
 </script>
 <template>
     <Modal :modalActive="modalActive" @close-modal="toggleModal" title="Student Information">
-        <div class="p-5 md:p-6 !scroll-smooth">
+        <div class="p-5 md:p-6">
             <form class="space-y-4 flex flex-col" @submit.prevent="handleSubmit">
                 <div class="flex flex-row gap-x-4">
                     <div>
@@ -254,7 +254,7 @@ const toggleModal = () => {
                     <div class="btn mb-3 ml-3 bg-blue-500">
                         <div class="flex items-center gap-x-2">
                             <i class="pi pi-user-plus"></i>
-                        <span>Create</span>
+                            <span>Create</span>
                         </div>
                     </div>
                 </RouterLink>
@@ -289,10 +289,12 @@ const toggleModal = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="(student, index) in filteredTableData" :key="student.id" class="border-b hover:bg-gray-100">
+                        <tr v-for="(student, index) in filteredTableData" :key="student.id"
+                            class="border-b hover:bg-gray-100">
                             <td class="py-2 px-4 whitespace-nowrap text-sm">{{ index + 1 }}</td>
                             <td class="py-2 px-4 whitespace-nowrap text-sm text-center">{{ student.student_id }}</td>
-                            <td class="py-2 px-4 whitespace-nowrap text-sm">{{ student.firstname + " " + student.lastname }}</td>
+                            <td class="py-2 px-4 whitespace-nowrap text-sm">{{ student.firstname + " " +
+                                student.lastname }}</td>
                             <td class="py-2 px-4 whitespace-nowrap text-sm">{{ student.email }}</td>
                             <td class="py-2 px-4 whitespace-nowrap text-sm">{{ student.phone }}</td>
                             <td class="py-2 px-4 whitespace-nowrap text-sm">{{ truncateText(student.address, 24) }}</td>
@@ -310,7 +312,7 @@ const toggleModal = () => {
                                     <div class="bg-blue-500 rounded-full p-1.5 mr-2 flex items-center justify-center">
                                         <button @click="getStudentData(student.id)"
                                             class="inline-block w-6 h-6 flex items-center justify-center">
-                                           <i class="pi pi-user-edit text-white"></i>
+                                            <i class="pi pi-user-edit text-white"></i>
                                         </button>
                                     </div>
                                     <div class="bg-red-500 rounded-full p-1.5 flex items-center justify-center">

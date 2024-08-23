@@ -66,20 +66,20 @@ const getDepartmentsData = async () => {
 const handleSubmit = async () => {
     let getTimeString1 = form.schedule.time.from;
     let getTimeString2 = form.schedule.time.to;
-    getTimeString1 = getTimeString1.substring(0,2)
-    getTimeString2 = getTimeString2.substring(0,2)
+    getTimeString1 = getTimeString1.substring(0, 2)
+    getTimeString2 = getTimeString2.substring(0, 2)
     let timeAP1 = '';
     let timeAP2 = '';
-        if(parseInt(getTimeString1, 10) >= 0 && parseInt(getTimeString1, 10) < 12){
-            timeAP1 = 'AM'
-        }else if (parseInt(getTimeString1, 10) >= 12 && parseInt(getTimeString1, 10) < 24){
-            timeAP1 = 'PM'
-        }
-        if(parseInt(getTimeString2, 10) >= 0 && parseInt(getTimeString2, 10) < 12){
-            timeAP2 = 'AM'
-        }else if (parseInt(getTimeString2, 10) >= 12 && parseInt(getTimeString2, 10) < 24){
-            timeAP2 = 'PM'
-        }
+    if (parseInt(getTimeString1, 10) >= 0 && parseInt(getTimeString1, 10) < 12) {
+        timeAP1 = 'AM'
+    } else if (parseInt(getTimeString1, 10) >= 12 && parseInt(getTimeString1, 10) < 24) {
+        timeAP1 = 'PM'
+    }
+    if (parseInt(getTimeString2, 10) >= 0 && parseInt(getTimeString2, 10) < 12) {
+        timeAP2 = 'AM'
+    } else if (parseInt(getTimeString2, 10) >= 12 && parseInt(getTimeString2, 10) < 24) {
+        timeAP2 = 'PM'
+    }
     const newCourse = {
         id: String(form.id),
         course_id: form.course_id.toUpperCase(),
@@ -228,35 +228,35 @@ onMounted(() => {
                             <div class="flex items-center">
                                 <input type="checkbox" v-model="form.schedule.days" value="Monday"
                                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                <label class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-300">Monday</label>
+                                <label class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-900">Monday</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox" v-model="form.schedule.days" value="Tuesday"
                                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                <label class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-300">Tuesday</label>
+                                <label class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-900">Tuesday</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox" v-model="form.schedule.days" value="Wednesday"
                                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                 <label
-                                    class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-300">Wednesday</label>
+                                    class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-900">Wednesday</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox" v-model="form.schedule.days" value="Thursday"
                                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                 <label
-                                    class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-300">Thursday</label>
+                                    class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-900">Thursday</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox" v-model="form.schedule.days" value="Friday"
                                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                <label class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-300">Friday</label>
+                                <label class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-900">Friday</label>
                             </div>
                             <div class="flex items-center">
                                 <input type="checkbox" v-model="form.schedule.days" value="Saturday"
                                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                 <label
-                                    class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-300">Saturday</label>
+                                    class="ms-1 text-sm font-medium text-gray-900 dark:text-gray-900">Saturday</label>
                             </div>
                         </div>
                     </div>
