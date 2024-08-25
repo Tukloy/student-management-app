@@ -563,7 +563,7 @@
       "description": "An introductory course in algebra designed to build a strong foundation in mathematical concepts and problem-solving skills. The course covers topics such as functions, equations, inequalities, and graphing techniques. Students will learn to manipulate algebraic expressions, solve quadratic and linear equations, and analyze functions using various methods. Emphasis is placed on developing critical thinking skills and applying algebraic concepts to real-world scenarios. By the end of the course, students will be prepared to tackle more advanced mathematical courses and practical applications.",
       "credits": "3",
       "category": "Mathematics",
-      "instructor_id": "I002",
+      "instructor_id": "I020",
       "schedule": {
         "days": [
           "Tuesday",
@@ -574,7 +574,7 @@
         "location": "Room 105, Science Building"
       },
       "semester": "2nd Sem",
-      "status": "Inactive",
+      "status": "Active",
       "department": "Mathematics Department",
       "evaluation_method": "Exams, Quizzes, Homework",
       "id": "2"
@@ -1164,6 +1164,26 @@
       "status": "Active",
       "department": "Psychology Department",
       "evaluation_method": "Nihil in animi quo "
+    },
+    {
+      "course_id": "OBCAECATI VOLUPTATE ",
+      "name": "Earum et error deser",
+      "description": "Debitis commodo inci",
+      "credits": "67",
+      "category": "General Education",
+      "instructor_id": "I003",
+      "schedule": {
+        "days": [
+          "Saturday"
+        ],
+        "time": "10:17 AM - 02:12 AM",
+        "location": "Nam minim omnis erro"
+      },
+      "semester": "2nd Sem",
+      "status": "Active",
+      "department": "Environmental Science Department",
+      "evaluation_method": "Veniam ut tenetur e",
+      "id": "31"
     }
   ],
   "departments": [
@@ -1205,18 +1225,7 @@
       "contact_phone": "+1-234-567-8901",
       "number_of_faculty": 20,
       "number_of_students": 350,
-      "courses_offered": [
-        {
-          "course_id": "MATH101",
-          "course_name": "Calculus I",
-          "credits": 4
-        },
-        {
-          "course_id": "MATH202",
-          "course_name": "Linear Algebra",
-          "credits": 3
-        }
-      ],
+      "courses_offered": [],
       "research_areas": [
         "Algebra",
         "Topology",
@@ -1602,34 +1611,28 @@
       "department_id": "ENV",
       "name": "Environmental Science Department",
       "description": "This department focuses on the study of environmental processes, sustainability, and the impact of human activity on the environment, with courses in ecology, conservation, and environmental policy.",
-      "head_of_department": "Dr. Patricia Lee",
+      "head_of_department": "Dr. Patricia Lees",
       "location": "Building O, Room 1515",
       "contact_email": "envdept@university.edu",
       "contact_phone": "+1-234-567-8914",
       "number_of_faculty": 20,
-      "number_of_students": 340,
+      "number_of_students": 341,
       "courses_offered": [
         {
-          "course_id": "ENV101",
-          "course_name": "Environmental Science",
-          "credits": 3
-        },
-        {
-          "course_id": "QUAERAT ULLAM EU VEL",
-          "course_name": "Quis voluptas aut mo",
-          "credits": 26
-        },
-        {
-          "course_id": "FUGIAT AUTE PERSPICI",
-          "course_name": "Dolorem quia vitae i",
-          "credits": 86
+          "course_id": "OBCAECATI VOLUPTATE ",
+          "course_name": "Earum et error deser",
+          "credits": 67
         }
       ],
       "research_areas": [
         "Sustainability",
         "Conservation",
         "Environmental Policy",
-        "asdasd"
+        "asdasd",
+        "Bading",
+        "asdasd",
+        "adasd",
+        "asdasdasd"
       ],
       "established_year": 1990,
       "website": "https://env.university.edu",

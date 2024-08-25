@@ -45,6 +45,12 @@ const setTitle = () => {
     case 'Department View':
       title.value = 'Department Management'
       break;
+    case 'Events View':
+      title.value = 'Event Management'
+      break;
+    case 'Analytics View':
+      title.value = 'Analytic Management'
+      break;
     // Add cases for other routes
     default:
       title.value = 'Error';

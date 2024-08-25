@@ -11,6 +11,8 @@ import CourseCreate from '@/components/CourseCreate.vue';
 import CourseEdit from '@/components/CourseEdit.vue';
 import DepartmentsView from '@/views/DepartmentsView.vue';
 import DepartmentView from "@/components/DepartmentView.vue";
+import EventsView from '@/views/EventsView.vue';
+import AnalyticsView from '@/views/AnalyticsView.vue';
 import NotFoundView from '@/views/NotFoundView.vue';
 
 const router = createRouter({
@@ -77,10 +79,21 @@ const router = createRouter({
       component: DepartmentView,
     },
     {
+      path: "/events-view/",
+      name: "Events View",
+      component: EventsView,
+    },
+    {
+      path: "/analytics-view/",
+      name: "Analytics View",
+      component: AnalyticsView
+    },
+    {
       path: '/:catchAll(.*)',
       name: "not-found",
       component: NotFoundView,
     },
+  
   ],
 });
 

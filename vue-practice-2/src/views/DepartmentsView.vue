@@ -100,7 +100,7 @@ import { RouterLink } from 'vue-router'
                         Department</span>
                 </RouterLink>
 
-                <RouterLink to="/department-view/Math" class="tooltip">
+                <RouterLink to="/department-view/MATH" class="tooltip">
                     <img class="absolute w-[21.5%] -bottom-[5.35%] left-[41%] cursor-pointer transition-transform duration-300 transform hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(0,0,255,0.7)]"
                         :src="matd">
                     <span

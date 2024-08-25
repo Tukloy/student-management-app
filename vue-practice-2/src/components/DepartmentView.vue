@@ -89,7 +89,8 @@ const getCourses = async () => {
     try {
         state.course = state.courses.filter(course => {
             return course.department === form.name &&
-                !state.department.courses_offered.some(depCourse => depCourse.course_id === course.course_id)
+                !state.department.courses_offered.some(depCourse => depCourse.course_id === course.course_id) &&
+                course.status === 'Active'
         })
     } catch (error) {
         console.error('No Courses Fetch')
