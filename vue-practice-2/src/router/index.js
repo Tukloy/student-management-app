@@ -13,6 +13,7 @@ import DepartmentsView from '@/views/DepartmentsView.vue';
 import DepartmentView from "@/components/DepartmentView.vue";
 import EventsView from '@/views/EventsView.vue';
 import AnalyticsView from '@/views/AnalyticsView.vue';
+import HelpCenterView from '@/views/HelpCenterView.vue';
 import NotFoundView from '@/views/NotFoundView.vue';
 
 const router = createRouter({
@@ -87,6 +88,11 @@ const router = createRouter({
       path: "/analytics-view/",
       name: "Analytics View",
       component: AnalyticsView
+    },
+    {
+      path: "/help-center-view/",
+      name: "Help Center View",
+      component: HelpCenterView
     },
     {
       path: '/:catchAll(.*)',

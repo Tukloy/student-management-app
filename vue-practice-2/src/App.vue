@@ -51,6 +51,9 @@ const setTitle = () => {
     case 'Analytics View':
       title.value = 'Analytic Management'
       break;
+    case 'Help Center View':
+      title.value = 'Help Center'
+      break;
     // Add cases for other routes
     default:
       title.value = 'Error';
@@ -62,6 +65,7 @@ setTitle();
 
 // Watch the route for changes and update the title
 watch(route, setTitle);
+
 </script>
 <template>
   <Sidebar />
