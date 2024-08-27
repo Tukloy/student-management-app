@@ -4,7 +4,7 @@ import { defineProps, defineEmits } from "vue";
 defineProps({
     title: {
         type: String,
-        default: 'Error',
+        default: '',
     },
     modalActive: {
         type: Boolean,
@@ -13,6 +13,14 @@ defineProps({
     size: {
         type: String,
         default: '45%'
+    },
+    closeDisplay: {
+        type: Boolean,
+        default: true
+    },
+    text: {
+        type: String,
+        default: '2xl'
     }
 });
 
@@ -34,11 +42,11 @@ const handleOverlayClick = (event) => {
                     <div v-if="modalActive" class="p-4" :style="{ width: size }">
                         <div class="relative bg-white rounded-lg shadow ">
                             <div class="flex items-center justify-between p-6 md:p-8 border-b rounded-t">
-                                <h3 class="text-2xl font-semibold text-gray-900">
+                                <h3 :class="['font-semibold text-gray-900', `text-${text}`]">
                                     {{ title }}
                                 </h3>
                                 <button @click="$emit('close-modal')" type="button"
-                                    class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white">
+                                    :class="['end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white', { 'hidden': !closeDisplay }]">
                                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                         fill="none" viewBox="0 0 14 14">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"

@@ -8,15 +8,27 @@
 }
 </style>
 <script setup>
-import { defineProps, ref, onMounted, onBeforeUnmount } from "vue";
-import { RouterLink } from "vue-router";
+import { defineProps, defineEmits, ref, onMounted, onBeforeUnmount } from "vue";
+import { RouterLink, useRouter } from "vue-router";
+import Modal from '@/components/Modal.vue'
 
+const router = useRouter()
+const modalActive = ref(null);
+const toggleModal = () => {
+    modalActive.value = !modalActive.value;
+    toggleDropdown()
+}
 defineProps({
     showTitle: {
         type: String,
         default: 'Error',
     }
 });
+const emit = defineEmits(['login-status']);
+const logOutToggle = () => {
+    router.push('/')
+    emit('login-status', false);
+};
 const isDropdownVisible = ref(false);
 const dropdownRef = ref(null);
 
@@ -43,6 +55,13 @@ onBeforeUnmount(() => {
 });
 </script>
 <template>
+    <Modal text="1xl" size="25%" :closeDisplay="false" :modalActive="modalActive"
+        title="Are you sure you want to logout?" @close-modal="toggleModal">
+        <div class="flex flex-row-reverse gap-x-4 px-4 py-2">
+            <button @click="toggleModal" class="py-1 px-4 bg-gray-200 hover:bg-gray-400 rounded">No</button>
+            <button @click="logOutToggle" class="text-white py-1 px-4 bg-red-700 hover:bg-red-600 rounded">Yes</button>
+        </div>
+    </Modal>
     <div class="ml-64 mb-5 bg-gray-100 flex justify-between items-center p-5 sticky top-0 z-50">
         <div class="text-gray-700 text-2xl font-bold">
             {{ showTitle }}
@@ -67,18 +86,20 @@ onBeforeUnmount(() => {
                             </div>
                             <div>Profile</div>
                         </RouterLink>
-                        <RouterLink to="/help-center-view" @click="toggleDropdown" class="flex flex-row gap-x-2 items-center hover:bg-gray-300 px-1 py-1 rounded-md">
+                        <RouterLink to="/help-center-view" @click="toggleDropdown"
+                            class="flex flex-row gap-x-2 items-center hover:bg-gray-300 px-1 py-1 rounded-md">
                             <div class="h-6 w-6 bg-gray-200 rounded-full flex items-center justify-center">
                                 <i class="pi pi-cog text-black"></i>
                             </div>
                             <div class="whitespace-nowrap">Help & Support</div>
                         </RouterLink>
-                        <a href="" class="flex flex-row gap-x-2 items-center hover:bg-gray-300 px-1 py-1 rounded-md">
+                        <button @click="toggleModal" type="button"
+                            class="flex flex-row gap-x-2 items-center hover:bg-gray-300 px-1 py-1 rounded-md">
                             <div class="h-6 w-6 bg-gray-200 rounded-full flex items-center justify-center">
                                 <i class="pi pi-sign-out text-black"></i>
                             </div>
                             <div>Log out</div>
-                        </a>
+                        </button>
                     </div>
                 </div>
                 <!-- <i class="pi pi-user"></i> -->

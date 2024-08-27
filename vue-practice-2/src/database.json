@@ -1640,5 +1640,19 @@
       "course_name": "Dolorem quia vitae i",
       "credits": "86"
     }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "tukloy",
+      "email": "rheyvince.26@gmail.com",
+      "password": "tuks5050"
+    },
+    {
+      "id": 2,
+      "username": "fatima",
+      "password": "tuks5050",
+      "email": "fatimasabariaga@gmail.com"
+    }
   ]
 }

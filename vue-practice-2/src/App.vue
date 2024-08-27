@@ -3,6 +3,7 @@ import { ref, watch } from 'vue';
 import { RouterView, useRoute } from 'vue-router';
 import Sidebar from '@/components/Sidebar.vue';
 import Navbar from '@/components/Navbar.vue';
+import Login from '@/views/LoginView.vue';
 
 const route = useRoute();
 const title = ref('');
@@ -66,9 +67,24 @@ setTitle();
 // Watch the route for changes and update the title
 watch(route, setTitle);
 
+const isLoggedIn = ref(false);
+
+const handleLoginStatus = (status) => {
+  isLoggedIn.value = status;
+};
+const logOutToggle = () => {
+  isLoggedIn.value = false;
+};
 </script>
 <template>
-  <Sidebar />
-  <Navbar :showTitle="title" />
-  <RouterView />
+  <div>
+    <div v-if="!isLoggedIn">
+      <Login @login-status="handleLoginStatus" />
+    </div>
+    <div v-else>
+      <Sidebar />
+      <Navbar :showTitle="title" @login-status="logOutToggle" />
+      <RouterView />
+    </div>
+  </div>
 </template>
